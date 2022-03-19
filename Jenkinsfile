@@ -3,7 +3,17 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo 'Hello World'
+                echo "make"
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "make check || true"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo "make publish"
             }
         }
     }
